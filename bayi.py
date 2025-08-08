@@ -35,9 +35,9 @@ BAYI_KULLANICILAR = {
     "Belcika": "Belcika1234!",
     "Avusturya": "Avusturya1234!",
     "Frankfurt": "Frankfurt1234!",
-    "Bremen": "Bremen1234!"
-    "Lyon": "Lyon1234!"
-    "Romanya": "Romanya1234!"
+    "Bremen": "Bremen1234!",
+    "Lyon": "Lyon1234!",
+    "Romanya": "Romanya1234!",
     "Bulgaristan": "Bulgaristan1234!"
 }
 

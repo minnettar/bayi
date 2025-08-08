@@ -29,6 +29,16 @@ PUAN_KATSAYILARI = {
 # ---- Basit kullanıcılar ----
 BAYI_KULLANICILAR = {
     "Paris": "ozturk1234!",
+    "Berlin": "Berlin1234!",
+    "Hamburg": "Hamburg1234!",
+    "Hollanda": "Hollanda1234!",
+    "Belcika": "Belcika1234!",
+    "Avusturya": "Avusturya1234!",
+    "Frankfurt": "Frankfurt1234!",
+    "Bremen": "Bremen1234!"
+    "Lyon": "Lyon1234!"
+    "Romanya": "Romanya1234!"
+    "Bulgaristan": "Bulgaristan1234!"
 }
 
 # ---- Sheets / Logo ----

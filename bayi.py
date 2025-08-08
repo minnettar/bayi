@@ -360,6 +360,12 @@ if st.session_state.show_checkout:
         # Tabloda göster
         st.table(summary)
 
+        # ---- ÖZET METRİKLER ----
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Genel Toplam (€)", f"{toplam:,.2f}")
+        c2.metric("Toplam Palet", f"{toplam_palet:.2f}")
+        c3.metric("Toplam Şeker Puan", f"{toplam_seker_puan:,}")
+
         # Yükleme tipi
         yukleme_tipi = st.radio(
             "Yükleme Biçimi Seçiniz",
@@ -383,7 +389,7 @@ if st.session_state.show_checkout:
               Şu anda sepette <span style="color:#b70404;">{toplam_palet:.2f} palet</span> var. <br>
               <span style="color:#3a79dd;">Tam {max_palet} palet</span> için 
               <span style="color:#b7a004;">{kalan_palet:.2f} palet</span> yer kaldı. <br>
-              Toplam Şeker Puan: <span style="color:#b7046d;">{toplam_seker_puan}</span>
+              Toplam Şeker Puan: <span style="color:#b7046d;">{toplam_seker_puan:,}</span>
             </div>
         """, unsafe_allow_html=True)
     else:
@@ -484,7 +490,7 @@ Sipariş özeti ektedir.
 
 Genel Toplam: {toplam:.2f} €
 Toplam Palet: {toplam_palet:.2f}
-Toplam Şeker Puan: {toplam_seker_puan}
+Toplam Şeker Puan: {toplam_seker_puan:,}
 
 İyi Çalışmalar!
 """
@@ -500,8 +506,7 @@ Toplam Şeker Puan: {toplam_seker_puan}
                 msg.attach(part)
 
             try:
-                # Güvenlik için Streamlit secrets kullanmanı öneririm;
-                # burada doğrudan devam ediyoruz.
+                # Prod için secrets kullanmanı öneririm.
                 smtp_server = "smtp.gmail.com"
                 smtp_port = 587
                 smtp_user = "todo@sekeroglugroup.com"
